@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Covid Dashboard</string>
+    <string name="refreshing_data_please_wait">Refreshing data, please wait...</string>
+    <string name="covid_19_dashboard">COVID-19 Dashboard</string>
+    <string name="number_of_positive_patients">Number of positive patients</string>
+    <string name="zero">0</string>
+    <string name="number_of_pending_results">Number of pending results</string>
+    <string name="add">Add</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="refresh">Refresh</string>
+</resources>
