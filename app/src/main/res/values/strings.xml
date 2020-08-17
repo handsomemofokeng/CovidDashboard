@@ -8,4 +8,6 @@
     <string name="add">Add</string>
     <string name="add_entry">Add Entry</string>
     <string name="refresh">Refresh</string>
+    <string name="enter_surname">enter surname</string>
+    <string name="enter_id_nr">enter ID nr</string>
 </resources>

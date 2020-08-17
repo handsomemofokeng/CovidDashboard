@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AddEntry">
+
+    <ProgressBar
+        android:id="@+id/add_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvLoad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:text="Loading...please wait..."
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/add_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="false">
+
+            <EditText
+                android:id="@+id/etSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="@string/enter_surname"
+                android:inputType="textPersonName"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="2dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="false">
+
+            <EditText
+                android:id="@+id/etID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="@string/enter_id_nr"
+                android:inputType="number"
+                android:padding="7dp"
+                android:textColor="@color/colorPrimary" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Switch
+            android:id="@+id/switchPos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Pending Results"
+            android:textColor="@color/colorWhite"
+            android:textOff="Pending"
+            android:textOn="Positive"
+            android:textSize="16sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="false">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="4"
+                android:padding="5dp"
+                android:text="@string/add_entry"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</LinearLayout>
