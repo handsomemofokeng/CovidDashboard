@@ -116,7 +116,8 @@
             app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
-            app:cardUseCompatPadding="false">
+            app:cardUseCompatPadding="false"
+            android:onClick="onClick_AddEntry">
 
             <TextView
                 android:id="@+id/textView6"

@@ -7,6 +7,9 @@ public class CovidEntry {
     String id;
     boolean isPositive;
 
+    public CovidEntry() {
+    }
+
     public String getObjectId() {
         return objectId;
     }

@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.Toast;
+
+import com.backendless.Backendless;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
 
 public class AddEntry extends AppCompatActivity {
 
@@ -21,8 +26,6 @@ public class AddEntry extends AppCompatActivity {
         etID = findViewById(R.id.etID);
         switchPos = findViewById(R.id.switchPos);
 
-
-
     }
 
     public void onClick_SwitchResults(View view) {
@@ -31,5 +34,28 @@ public class AddEntry extends AppCompatActivity {
         }else {
             switchPos.setTextOff("Pending Results");
         }
+    }
+
+    public void onClick_AddEntry(View view) {
+
+        CovidEntry covidEntry = new CovidEntry();
+
+        covidEntry.setFullName(etFullname.getText().toString().trim());
+        covidEntry.setId(etID.getText().toString().trim());
+        covidEntry.setPositive(switchPos.isChecked());
+
+        Backendless.Persistence.save(covidEntry, new AsyncCallback<CovidEntry>() {
+            @Override
+            public void handleResponse(CovidEntry response) {
+                Toast.makeText(AddEntry.this, response + " saved successfully", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+
+            @Override
+            public void handleFault(BackendlessFault fault) {
+                Toast.makeText(AddEntry.this, "Error: "+ fault.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }
