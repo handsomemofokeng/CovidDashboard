@@ -10,6 +10,8 @@ import android.os.strictmode.IntentReceiverLeakedViolation;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final int REQ_CODE = 1;
@@ -32,12 +34,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_Refresh(View view) {
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        if (requestCode == REQ_CODE) {
+            if (resultCode == RESULT_OK) { // Activity.RESULT_OK
+
+                Objects.requireNonNull(rvEntries.getAdapter()).notifyDataSetChanged();
+            }
+        }
 
     }
 }
