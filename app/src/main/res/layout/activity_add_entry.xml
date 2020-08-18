@@ -100,7 +100,9 @@
             android:textColor="@color/colorWhite"
             android:textOff="Pending"
             android:textOn="Positive"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:onClick="onClick_SwitchResults"
+            />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnAdd"
