@@ -18,7 +18,6 @@ public class ApplicationClass extends Application {
         Backendless.initApp(getApplicationContext(),
                 APPLICATION_ID,
                 API_KEY);
-
     }
 
 }

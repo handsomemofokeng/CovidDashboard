@@ -26,6 +26,12 @@ public class AddEntry extends AppCompatActivity {
         etID = findViewById(R.id.etID);
         switchPos = findViewById(R.id.switchPos);
 
+
+        Bundle bundle = getIntent().getExtras();
+
+        if (bundle != null){
+
+        }
     }
 
     public void onClick_SwitchResults(View view) {
@@ -48,6 +54,7 @@ public class AddEntry extends AppCompatActivity {
             @Override
             public void handleResponse(CovidEntry response) {
                 Toast.makeText(AddEntry.this, response + " saved successfully", Toast.LENGTH_SHORT).show();
+                setResult(RESULT_OK, getIntent());
                 finish();
             }
 
